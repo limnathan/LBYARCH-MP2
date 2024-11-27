@@ -17,7 +17,7 @@ saxpy_asm:
 
 saxpy_loop:
     cmp r8, rcx ; check if r8 >= n
-    jge .end
+    jge end
 
     movss xmm1, dword [rdi + r8*4] ; load X[i] into xmm1
     mulss xmm1, xmm0 ; xmm1 = A * X[i]
