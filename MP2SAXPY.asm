@@ -4,9 +4,6 @@ global saxpy_asm
 ; void saxpy_asm(float A, float *X, float *Y, float *Z, int n)
 
 saxpy_asm:
-    push rbp
-    mov rbp, rsp
-
     ; A -> xmm0
     ; X -> rdi
     ; Y -> rsi
@@ -29,5 +26,4 @@ saxpy_loop:
     jmp saxpy_loop
 
 end:
-    pop rbp
     ret
